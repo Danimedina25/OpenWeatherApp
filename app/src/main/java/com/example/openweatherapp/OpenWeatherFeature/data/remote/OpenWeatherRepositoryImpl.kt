@@ -1,11 +1,10 @@
 package com.example.openweatherapp.OpenWeatherFeature.data.remote
 
 import com.example.openweatherapp.OpenWeatherFeature.data.database.OpenWeatherDatabase
-import com.example.openweatherapp.OpenWeatherFeature.data.database.dao.OpenWeatherDao
-import com.example.openweatherapp.OpenWeatherFeature.data.database.entities.toDatabase
 import com.example.openweatherapp.OpenWeatherFeature.data.database.entities.toDomain
 import com.example.openweatherapp.OpenWeatherFeature.data.mappers.toDomain
 import com.example.openweatherapp.OpenWeatherFeature.domain.model.OpenWeather
+import com.example.openweatherapp.OpenWeatherFeature.domain.model.toDatabase
 import com.example.openweatherapp.OpenWeatherFeature.domain.repository.OpenWeatherRepository
 import com.example.openweatherapp.OpenWeatherFeature.domain.util.Constants
 import com.example.openweatherapp.OpenWeatherFeature.domain.util.NetworkResult

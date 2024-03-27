@@ -13,7 +13,6 @@ import io.mockk.impl.annotations.RelaxedMockK
 import kotlinx.coroutines.runBlocking
 import org.junit.Before
 import org.junit.Test
-import org.junit.jupiter.api.Assertions.*
 
 class GetWeatherFromPlaceUseCaseTest{
     @RelaxedMockK

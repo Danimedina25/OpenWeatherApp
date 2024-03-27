@@ -6,7 +6,11 @@ import com.example.openweatherapp.OpenWeatherFeature.data.remote.response.CoordD
 import com.example.openweatherapp.OpenWeatherFeature.data.remote.response.MainDto
 import com.example.openweatherapp.OpenWeatherFeature.data.remote.response.SysDto
 import com.example.openweatherapp.OpenWeatherFeature.data.remote.response.WeatherDto
+import com.example.openweatherapp.OpenWeatherFeature.domain.model.Coord
+import com.example.openweatherapp.OpenWeatherFeature.domain.model.Main
 import com.example.openweatherapp.OpenWeatherFeature.domain.model.OpenWeather
+import com.example.openweatherapp.OpenWeatherFeature.domain.model.Sys
+import com.example.openweatherapp.OpenWeatherFeature.domain.model.Weather
 
 @Entity(tableName = "open_weather_table")
 data class OpenWeatherEntity(
@@ -25,10 +29,7 @@ data class OpenWeatherEntity(
     val pressure: Int,
 )
 
-fun OpenWeather.toDatabase() = OpenWeatherEntity(id = id, humidity = main.humidity, timezone = timezone, visibility = visibility,
-    description = weather.first().description, lat = coord.lat, lon = coord.lon, name = name, country = sys.country,
-    temp = main.temp, temp_max = main.temp_max, temp_min = main.temp_min, pressure = main.pressure)
 
-fun OpenWeatherEntity.toDomain() = OpenWeather(id, MainDto(feels_like = 0.0, humidity, pressure, temp, temp_max, temp_min),
-name, timezone, visibility, listOf(WeatherDto(description, "", 0, "")), SysDto(country, 0,0, 0,0), CoordDto(lat, lon)
+fun OpenWeatherEntity.toDomain() = OpenWeather(id, Main(feels_like = 0.0, humidity, pressure, temp, temp_max, temp_min),
+name, timezone, visibility, listOf(Weather(description, "", 0, "")), Sys(country, 0,0), Coord(lat, lon)
 )

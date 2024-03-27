@@ -6,12 +6,12 @@ import com.example.openweatherapp.OpenWeatherFeature.domain.model.OpenWeather
 fun ResponseDto.toDomain(): OpenWeather{
     return OpenWeather(
         id = this.id,
-        main = this.main,
+        main = this.main.toDomain(),
         name = this.name,
         timezone = this.timezone,
         visibility = this.visibility,
-        weather = this.weather,
-        sys = this.sys,
-        coord = this.coord
+        weather = this.toListWeather(),
+        sys = this.sys.toDomain(),
+        coord = this.coord.toDomain()
     )
 }

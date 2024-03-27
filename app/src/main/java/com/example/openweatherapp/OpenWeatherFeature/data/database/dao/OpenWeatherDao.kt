@@ -20,5 +20,4 @@ interface OpenWeatherDao {
     @Query("DELETE FROM open_weather_table")
     suspend fun deleteAllWeathers()
 
-
 }
