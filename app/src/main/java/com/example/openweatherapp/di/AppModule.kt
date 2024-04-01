@@ -24,5 +24,4 @@ object AppModule {
             .build()
             .create()
     }
-
 }

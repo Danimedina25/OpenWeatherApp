@@ -15,7 +15,7 @@ import javax.inject.Singleton
 class DatabaseModule {
     @Singleton
     @Provides
-    fun provideFakerDB(@ApplicationContext context : Context) : OpenWeatherDatabase{
+    fun provideOpenWeatherDB(@ApplicationContext context : Context) : OpenWeatherDatabase{
         return Room.databaseBuilder(context, OpenWeatherDatabase::class.java, "OpenWeatherDB").build()
     }
 }
