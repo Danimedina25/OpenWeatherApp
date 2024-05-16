@@ -2,7 +2,7 @@ package com.example.openweatherapp.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.openweatherapp.OpenWeatherFeature.data.database.OpenWeatherDatabase
+import com.example.openweatherapp.openWeatherFeature.data.database.OpenWeatherDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

@@ -1,7 +1,7 @@
 package com.example.openweatherapp.di
 
-import com.example.openweatherapp.OpenWeatherFeature.data.remote.OpenWeatherRepositoryImpl
-import com.example.openweatherapp.OpenWeatherFeature.domain.repository.OpenWeatherRepository
+import com.example.openweatherapp.openWeatherFeature.data.remote.repository.OpenWeatherRepositoryImpl
+import com.example.openweatherapp.openWeatherFeature.domain.repository.OpenWeatherRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn

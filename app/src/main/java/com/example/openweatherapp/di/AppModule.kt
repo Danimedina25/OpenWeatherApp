@@ -1,7 +1,7 @@
 package com.example.openweatherapp.di
 
-import com.example.openweatherapp.OpenWeatherFeature.data.remote.OpenWeatherApi
-import com.example.openweatherapp.OpenWeatherFeature.domain.util.Constants
+import com.example.openweatherapp.openWeatherFeature.data.remote.services.OpenWeatherApi
+import com.example.openweatherapp.openWeatherFeature.domain.util.Constants
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
