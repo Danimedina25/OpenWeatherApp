@@ -61,6 +61,10 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         binding.buttonConsultarClima.setOnClickListener {
             getDataWeatherFromPlace()
         }
+
+        binding.ivButtonClose.setOnClickListener{
+            closeDataWeather()
+        }
     }
 
     private fun setAutocompleteSearchOnMaps(){
@@ -70,12 +74,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         autocompleteFragment.setOnPlaceSelectedListener(object: PlaceSelectionListener{
             override fun onError(status: Status) {
                 when(status) {
-                    Status.RESULT_CANCELED -> binding.buttonConsultarClima.visibility = View.GONE
-                    else -> Toast.makeText(
+                    Status.RESULT_CANCELED -> {binding.buttonConsultarClima.visibility = View.GONE}
+                    else ->
+                    {   Toast.makeText(
                         applicationContext,
                         "Ocurrió un error en la búsqueda ${status.status.toString()}",
                         Toast.LENGTH_SHORT
-                    ).show()
+                        ).show()
+                        Log.i("error", status.status.toString())
+                    }
                 }
             }
 
@@ -121,6 +128,15 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback{
         val temp = convertKelvinToCelsius(openWeather.main.temp).toString().substringBefore(".") + "°C"
         binding.tvTemperatura.text = temp
         binding.tvHumedad.text = "humedad: ${openWeather.main.humidity}%"
+    }
+
+    private fun closeDataWeather(){
+        binding.cardviewInfoWeather.visibility = View.GONE
+        binding.buttonConsultarClima.visibility = View.VISIBLE
+        binding.tvNamePlace.text = ""
+        binding.tvLatLng.text = ""
+        binding.tvTemperatura.text = ""
+        binding.tvHumedad.text = ""
     }
 
     private fun convertKelvinToCelsius(temp: Double): Double{
