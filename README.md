@@ -21,3 +21,18 @@ Aplicación para consultar el clima en tiempo real en cualquier parte del mundo.
 3. Añadir la API key en el archivo 'com.example.openweatherapp.openWeatherFeature.domain.util.Constants'.
 open_weather_api_key = "tu_api_key"
 
+## Capturas de pantalla
+   ### Ícono launcher
+   ![ícono launcher](screenshots/1.png)
+   
+   ### Pantalla principal
+   ![pantalla principal](screenshots/2.png)
+   
+   ### Pantalla de búsqueda de ciudades
+   ![búsqueda de ciudades](screenshots/3.png)
+
+   ### Pantalla de ciudad encontrada
+   ![ciudad encontrada](screenshots/4.png)
+
+   ### Pantalla de datos meteorológicos
+   ![datos meteorológicos](screenshots/5.png)
